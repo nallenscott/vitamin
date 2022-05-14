@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-void sort (int *array, int size) {
+void sort (char *array, int size) {
   int i, j, temp;
   for (i = 0; i < size - 1; i++) {
     for (j = 0; j < size - i - 1; j++) {
-      if (array[j] < array[j + 1]) {
+      if (array[j] > array[j + 1]) {
         temp = array[j];
         array[j] = array[j + 1];
         array[j + 1] = temp;
@@ -13,17 +13,20 @@ void sort (int *array, int size) {
   }
 }
 
-void printArray (int *array, int size) {
+void printArray (char *array, int size) {
   int i;
   for (i = 0; i < size; i++) {
-    printf("%d ", array[i]);
+    printf("%c ", array[i]);
   }
   printf("\n");
 }
 
 int main () {
 
-  int array[] = {5, 2, 4, 6, 1, 3};
+  // int array[] = {5, 2, 4, 6, 1, 3};
+
+  char array[] = {'F', 'A', 'C', 'E', 'B', 'D'};
+
   int size = sizeof(array) / sizeof(array[0]);
 
   sort(array, size);
