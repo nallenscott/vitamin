@@ -2,7 +2,7 @@
 
 int main () {
 
-  FILE *pF = fopen("test.txt", "w"); // w - write, r - read, a - append
+  FILE *pF = fopen("./../fixture.txt", "w"); // w - write, r - read, a - append
 
   fprintf(pF, "Supercalifragilisticexpialidocious!\n");
 
